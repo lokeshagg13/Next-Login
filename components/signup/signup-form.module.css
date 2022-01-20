@@ -57,21 +57,3 @@
   background-color: #873abb;
   border-color: #873abb;
 }
-
-.actions .toggle {
-  margin-top: 1rem;
-  background-color: transparent;
-  color: #9f5ccc;
-  border: none;
-  padding: 0.15rem 1.5rem;
-}
-
-.actions .toggle:hover {
-  background-color: transparent;
-  color: #ae82cc;
-}
-
-.error {
-  color: #d8000c;
-  background-color: #ffd2d2;
-}
