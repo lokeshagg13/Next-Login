@@ -4,4 +4,5 @@ function HomePage() {
   return <StartingPageContent />;
 }
 
+HomePage.auth = false;
 export default HomePage;

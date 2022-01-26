@@ -1,16 +1,16 @@
 import { getSession } from "next-auth/react";
-import LoginForm from "../components/login/login-form";
+import ChangePasswordForm from "../components/profile/change-password-form";
 
-function LoginPage() {
-  return <LoginForm />;
+function ChangePasswordPage(props) {
+  return <ChangePasswordForm session={props.session} />;
 }
 
 export async function getServerSideProps(context) {
   const session = await getSession({ req: context.req });
-  if (session !== null) {
+  if (session === null) {
     return {
       redirect: {
-        destination: "/profile",
+        destination: "/login",
         permanent: false,
       },
     };
@@ -22,5 +22,5 @@ export async function getServerSideProps(context) {
   };
 }
 
-LoginPage.auth = false;
-export default LoginPage;
+ChangePasswordPage.auth = true;
+export default ChangePasswordPage;
