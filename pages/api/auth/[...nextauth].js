@@ -19,6 +19,7 @@ export default NextAuth({
       },
     }),
   ],
+  secret: "a-very-random-key-difficult-to-fetch",
   session: {
     strategy: "jwt",
     maxAge: 100 * 60,
